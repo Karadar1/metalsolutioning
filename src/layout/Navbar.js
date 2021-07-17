@@ -8,9 +8,9 @@ export const Navbar = () => {
   const portofoliuSection = useScrollSection('portofoliu');
 
   return (
-    <nav>
+    <nav className='navBar'>
       <a href='/' className='logo'>
-        <img src={logo} alt={logo} id='logo' />
+        <img src={logo} alt={logo} id='logoImg' />
       </a>
 
       <ul className='nav_links'>

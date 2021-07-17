@@ -6,7 +6,6 @@ export const Acasa = () => {
   return (
     <div>
       <Section className='pages' id='acasa'>
-        <h1></h1>
         <div className='homeContainer'>
           <div className='leftPart'>
             <h2>AVEM SOLUTIA!</h2>

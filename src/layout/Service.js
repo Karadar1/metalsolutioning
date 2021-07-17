@@ -1,27 +1,28 @@
 import React from 'react';
 import { Card } from '../components/Card';
-import { Button } from '../components/Button';
+import { Button } from 'reactstrap';
 import wrenchIcon from '../assets/wrench.svg';
 import bendingIcon from '../assets/bending.svg';
 import weldingIcon from '../assets/welding.svg';
 import { Section } from 'react-scroll-section';
 
 export const Service = () => {
+  //TODO css class for buttons
   return (
     <Section className='pages' id='servicii'>
-      <h1>Servicii</h1>
+      <h1 className='titles'>Servicii</h1>
       <div className='cardsDiv'>
         <Card
           title='Restaurari'
           svg={wrenchIcon}
           text='lorem!'
-          actions={<Button text='Galerie' className='btn-primary-md' />}
+          actions={<Button color='primary' />}
         />
         <Card
           title='Confectii Metalice'
           svg={weldingIcon}
           text='lorem!'
-          actions={<Button text='Galerie' className='btn-primary-md' />}
+          actions={<Button color='primary' />}
         />
         <Card
           title='Produse in serie'
@@ -30,8 +31,17 @@ export const Service = () => {
           actions={
             <>
               <div>
-                <Button text='Galerie' className='btn-primary-sm' />{' '}
-                <Button text='Parteneri' className='btn-secondary-sm' />
+                <Button color='primary' className='butt'>
+                  {' '}
+                  Link
+                </Button>
+                <Button style={{ color: 'black', backgroundColor: 'red' }}>
+                  {' '}
+                  Link
+                </Button>
+
+                {/* <Button text='Galerie' className='btn-primary-sm' />{' '}
+                <Button text='Parteneri' className='btn-secondary-sm' /> */}
               </div>
             </>
           }

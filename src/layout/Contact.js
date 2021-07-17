@@ -11,7 +11,7 @@ export const Contact = () => {
     <div>
       <Section className='pages' id='contact'>
         {/* <div className='filler'></div> */}
-        <h1>Contact</h1>
+        <h1 className='titles'>Contact</h1>
         <div className='mapAndContact'>
           {isTablet ? (
             <iframe
@@ -27,7 +27,7 @@ export const Contact = () => {
             <iframe
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.141260692526!2d21.246429015825935!3d45.728261823805056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455dc2fe699fd7%3A0xebbb4adb2c0d270d!2sStrada%20Boema%203%2C%20Timi%C8%99oara%20307221!5e0!3m2!1sro!2sro!4v1622729551987!5m2!1sro!2sro'
               width={800}
-              height={600}
+              height={450}
               style={{ border: 0 }}
               allowFullScreen
               loading='lazy'

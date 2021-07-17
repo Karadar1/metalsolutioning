@@ -4,6 +4,7 @@ import { Service } from './Service';
 import { Acasa } from './Acasa';
 import { Contact } from './Contact';
 import { Portofoliu } from './Portofoliu';
+import Footer from './Footer';
 
 export const Body = () => {
   return (
@@ -14,6 +15,7 @@ export const Body = () => {
         <Portofoliu />
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 };

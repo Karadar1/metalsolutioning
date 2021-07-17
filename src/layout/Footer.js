@@ -3,16 +3,15 @@ import React from 'react';
 const Footer = () => {
   return (
     <div>
-      <div className='Footer'>
-        <div className='header'>
+      <div className='footer'>
+        <div className='footerHeader'>
           <h1>MetalSolutioning</h1>
           <img src='' alt='' />
           <img src='' alt='' />
           <img src='' alt='' />
         </div>
-        {/* <hr className='footerHr' /> */}
 
-        <div className='mainBody'>
+        <div className='footerMainBody'>
           <ul>
             {' '}
             <h5>Despre noi</h5>
