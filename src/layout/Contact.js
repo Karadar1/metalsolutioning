@@ -11,7 +11,7 @@ export const Contact = () => {
     <div>
       <Section className='pages' id='contact'>
         {/* <div className='filler'></div> */}
-        <h1 className='titles'>Contact</h1>
+        <h1 className='sectionTitles'>Contact</h1>
         <div className='mapAndContact'>
           {isTablet ? (
             <iframe
@@ -37,7 +37,7 @@ export const Contact = () => {
 
           <div id='infoLists'>
             <ul>
-              <h3 className='headTitles'>Contact</h3>
+              <h3 className='headTitles'>Contacteaza-ne</h3>
               <li>
                 <img src={phone} alt='' className='listIcons' />
                 (+40)-712312399

@@ -1,5 +1,6 @@
-import './App.css';
+import './style.css';
 import Navbar from './layout/Navbar';
+import { NavbarEx } from './layout/NavbarEx';
 import Body from './layout/Body';
 import { ScrollingProvider } from 'react-scroll-section';
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className='App'>
       <ScrollingProvider>
-        <Navbar />
+        <NavbarEx />
         <Body />
       </ScrollingProvider>
     </div>

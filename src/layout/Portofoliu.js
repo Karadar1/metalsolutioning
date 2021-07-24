@@ -6,7 +6,7 @@ export const Portofoliu = () => {
 
   return (
     <Section className='pages' id='portofoliu'>
-      <h1 className='titles'>Portofoliu</h1>
+      <h1 className='sectionTitles'>Portofoliu</h1>
       <CarouselSlider />
     </Section>
   );

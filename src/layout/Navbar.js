@@ -7,6 +7,8 @@ export const Navbar = () => {
   const serviciiSection = useScrollSection('servicii');
   const portofoliuSection = useScrollSection('portofoliu');
 
+  //TODO nav links input behaviour
+
   return (
     <nav className='navBar'>
       <a href='/' className='logo'>

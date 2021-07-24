@@ -7,22 +7,21 @@ import weldingIcon from '../assets/welding.svg';
 import { Section } from 'react-scroll-section';
 
 export const Service = () => {
-  //TODO css class for buttons
   return (
     <Section className='pages' id='servicii'>
-      <h1 className='titles'>Servicii</h1>
+      <h1 className='sectionTitles'>Servicii</h1>
       <div className='cardsDiv'>
         <Card
           title='Restaurari'
           svg={wrenchIcon}
           text='lorem!'
-          actions={<Button color='primary' />}
+          actions={<Button color='secondary'>Portfoliu</Button>}
         />
         <Card
           title='Confectii Metalice'
           svg={weldingIcon}
           text='lorem!'
-          actions={<Button color='primary' />}
+          actions={<Button color='secondary'>Portfoliu</Button>}
         />
         <Card
           title='Produse in serie'
@@ -30,14 +29,13 @@ export const Service = () => {
           text='Etiam eget varius tortor, in feugiat nulla. Aliquam nec sem mi. Nulla faucibus blandit felis vel pellentesque. Donec id viverra felis.'
           actions={
             <>
-              <div>
-                <Button color='primary' className='butt'>
-                  {' '}
-                  Link
-                </Button>
-                <Button style={{ color: 'black', backgroundColor: 'red' }}>
-                  {' '}
-                  Link
+              <div className='cardDoubleButtons'>
+                <Button color='secondary'>Portfoliu</Button>
+                <Button
+                  color='secondary'
+                  style={{ color: 'black', background: '#ff8900' }}
+                >
+                  Parteneri
                 </Button>
 
                 {/* <Button text='Galerie' className='btn-primary-sm' />{' '}
