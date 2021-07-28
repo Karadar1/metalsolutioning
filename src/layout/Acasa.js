@@ -1,13 +1,26 @@
-import React from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Section } from 'react-scroll-section';
 import weldingMask from '../assets/Group 9.svg';
 import { useMediaQuery } from 'react-responsive';
 import { Button } from 'reactstrap';
+import { toggleImgState } from '../utils/AcasaAnimations';
+import { wedlingMaskState } from '../App';
 
 export const Acasa = () => {
+  const { imgState, setImgState } = useContext(wedlingMaskState);
+  // const [imgState, setImgState] = useState('firstPosition');
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1024px)',
   });
+
+  const weldingAnimation = () => {
+    toggleImgState(imgState, setImgState);
+  };
+
+  useEffect(() => {
+    weldingAnimation();
+  }, []);
+
   return (
     <div>
       <Section className='pages' id='acasa'>
@@ -23,12 +36,40 @@ export const Acasa = () => {
                   nec.
                 </p>
                 <div className='homeButtons'>
-                  <Button text='SUNA ACUM!' className='btn-primary-lg' />
-                  <Button text='SERVICII' className='btn-secondary-lg' />
+                  <Button
+                    style={{ background: '#ff8900', color: '#333333' }}
+                    active
+                    href='tel:0773712357'
+                    className='btnLarge'
+                    size='lg'
+                  >
+                    Suna Acum
+                  </Button>
+                  <a href='#servicii'>
+                    <Button
+                      outline
+                      color='secondary'
+                      className='btnLarge'
+                      size='lg'
+                    >
+                      Servicii
+                    </Button>
+                  </a>
+                  {/* <Button
+                    text='IMG'
+                    onClick={() => {
+                      toggleImgState(imgState, setImgState);
+                    }}
+                  /> */}
                 </div>
               </div>
               <div className='rightPart'>
-                <img src={weldingMask} alt='' id='weldingMask' />
+                <img
+                  src={weldingMask}
+                  className={imgState}
+                  alt=''
+                  id='weldingMask'
+                />
               </div>
             </div>
           </>
@@ -52,9 +93,7 @@ export const Acasa = () => {
                   className='btnLarge'
                   size='lg'
                 >
-                  {/* <a href='tel:0773712357' id='phoneLink'> */}
                   Suna Acum
-                  {/* </a> */}
                 </Button>
                 <a href='#servicii'>
                   <Button

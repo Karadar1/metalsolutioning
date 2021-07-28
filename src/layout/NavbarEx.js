@@ -21,6 +21,7 @@ import portofolioIcon from '../assets/icons/images.svg';
 import contactIcon from '../assets/icons/contact-book.svg';
 
 import logo from '../assets/logo/logo.svg';
+import { toggleImgState } from '../utils/AcasaAnimations';
 
 export const NavbarEx = (props) => {
   const isTablet = useMediaQuery({ query: '(max-device-width: 767px)' });

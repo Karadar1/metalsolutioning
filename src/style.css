@@ -370,38 +370,97 @@ ul li {
   }
 }
 
-/* STLYLING FOR Desktop */
+/* STLYLING FOR Laptop */
 @media (min-width: 1024px) {
+  /* STYLING FOR INDIVIDUAL COMPONENTS */
+  /* Cards */
+  /* .cardComponent {
+    height: 420px;
+    width: 320px;
+  } */
+
   /* STYLING FOR INDIVIDUAL PAGES */
 
   /* Acasa */
   .homeContainer {
     display: flex;
     flex-direction: row;
+    height: 100%;
   }
   .leftPart {
     width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .btnLarge {
+    width: 160px;
+  }
+  .homeButtons {
+    width: 400px;
+    justify-content: space-between;
+    margin: 30px 0px;
   }
   .rightPart {
     width: 50%;
     position: relative;
   }
   .homeParagraph {
-    width: 80%;
+    width: 65%;
   }
   #weldingMask {
-    width: 300px;
+    width: 33vw;
+    /* max-height: 600px; */
+    margin-bottom: 20px;
+  }
+  .secondPosition {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: -200px;
+    margin-left: 17vw;
+    transition: 2s;
+  }
+  .firstPosition {
+    position: absolute;
+    top: -200px;
+    margin-left: 900px;
   }
 
   /* Service */
   .cardsDiv {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
   }
+  /* .pages {
+    height: 100vh;
+  } */
+}
+
+@media (min-width: 1300px) {
   .pages {
     height: 100vh;
   }
-} ;
+}
+/* STLYLING FOR Laptop */
+
+@media (min-width: 1440px) {
+  /* STYLING FOR INDIVIDUAL COMPONENTS */
+  /* Cards */
+  .cardComponent {
+    height: 420px;
+    width: 320px;
+  }
+
+  /* STYLING FOR INDIVIDUAL PAGES */
+  /* Acasa */
+  .leftPart {
+    align-self: start;
+  }
+  /* Service */
+  .cardsDiv {
+    height: 90%;
+  }
+}
