@@ -3,7 +3,7 @@ import { Section } from 'react-scroll-section';
 import weldingMask from '../assets/Group 9.svg';
 import { useMediaQuery } from 'react-responsive';
 import { Button } from 'reactstrap';
-import { toggleImgState } from '../utils/AcasaAnimations';
+import { addImgState } from '../utils/AcasaAnimations';
 import { wedlingMaskState } from '../App';
 
 export const Acasa = () => {
@@ -14,7 +14,7 @@ export const Acasa = () => {
   });
 
   const weldingAnimation = () => {
-    toggleImgState(imgState, setImgState);
+    addImgState(setImgState);
   };
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export const Acasa = () => {
                   {/* <Button
                     text='IMG'
                     onClick={() => {
-                      toggleImgState(imgState, setImgState);
+                      addImgState(setImgState);
                     }}
                   /> */}
                 </div>

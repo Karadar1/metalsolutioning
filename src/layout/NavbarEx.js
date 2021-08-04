@@ -21,9 +21,13 @@ import portofolioIcon from '../assets/icons/images.svg';
 import contactIcon from '../assets/icons/contact-book.svg';
 
 import logo from '../assets/logo/logo.svg';
-import { toggleImgState } from '../utils/AcasaAnimations';
+import { addImgState, removeImg } from '../utils/AcasaAnimations';
+import { wedlingMaskState } from '../App';
+import { useContext } from 'react';
 
 export const NavbarEx = (props) => {
+  const { imgState, setImgState } = useContext(wedlingMaskState);
+
   const isTablet = useMediaQuery({ query: '(max-device-width: 767px)' });
 
   const acasaSection = useScrollSection('acasa');
@@ -121,7 +125,10 @@ export const NavbarEx = (props) => {
 
           <ul className='nav_links'>
             <li
-              onClick={acasaSection.onClick}
+              onClick={() => {
+                acasaSection.onClick();
+                addImgState(setImgState);
+              }}
               // selected={acasaSection.selected}
               className={`listItem ${
                 acasaSection.selected ? 'listItemActive' : ''
@@ -130,7 +137,10 @@ export const NavbarEx = (props) => {
               acasa
             </li>
             <li
-              onClick={serviciiSection.onClick}
+              onClick={() => {
+                serviciiSection.onClick();
+                removeImg(setImgState);
+              }}
               // selected={serviciiSection.selected}
               className={`listItem ${
                 serviciiSection.selected ? 'listItemActive' : ''
@@ -140,7 +150,10 @@ export const NavbarEx = (props) => {
             </li>
 
             <li
-              onClick={portofoliuSection.onClick}
+              onClick={() => {
+                removeImg(setImgState);
+                portofoliuSection.onClick();
+              }}
               // selected={acasaSection.selected}
               className={`listItem ${
                 portofoliuSection.selected ? 'listItemActive' : ''
@@ -150,7 +163,10 @@ export const NavbarEx = (props) => {
             </li>
 
             <li
-              onClick={contactSection.onClick}
+              onClick={() => {
+                contactSection.onClick();
+                removeImg(setImgState);
+              }}
               // selected={contactSection.selected}
               className={`listItem ${
                 contactSection.selected ? 'listItemActive' : ''

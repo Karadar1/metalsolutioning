@@ -1,15 +1,9 @@
 const AcasaAnimations = {
-  toggleImgState: function (state, setState) {
-    if (state === 'firstPosition') {
-      setState('secondPosition');
-    } else {
-      setState('firstPosition');
-    }
+  addImgState: function (setState) {
+    setState('secondPosition');
   },
-  removeImg: function (state, setState) {
-    if (state === 'secondPosition') {
-      setState('firstPostion');
-    }
+  removeImg: function (setState) {
+    setState('firstPosition');
   },
 };
 

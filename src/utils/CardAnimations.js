@@ -1,15 +1,13 @@
 const CardAnimations = {
   toggleImgState: function (state, setState) {
-    if (state === 'firstPosition') {
-      setState('secondPosition');
+    if (state === 'firstPositionForCards') {
+      setState('secondPositionForCards');
     } else {
-      setState('firstPosition');
+      setState('firstPositionForCards');
     }
   },
   removeImg: function (state, setState) {
-    if (state === 'secondPosition') {
-      setState('firstPostion');
-    }
+    setState('firstPostionForCards');
   },
 };
 

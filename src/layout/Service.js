@@ -15,13 +15,21 @@ export const Service = () => {
           title='Restaurari'
           svg={wrenchIcon}
           text='lorem!'
-          actions={<Button color='secondary'>Portfoliu</Button>}
+          actions={
+            <Button color='secondary' className='hoveredButton'>
+              Portfoliu
+            </Button>
+          }
         />
         <Card
           title='Confectii Metalice'
           svg={weldingIcon}
           text='lorem!'
-          actions={<Button color='secondary'>Portfoliu</Button>}
+          actions={
+            <Button color='secondary' className='hoveredButton'>
+              Portfoliu
+            </Button>
+          }
         />
         <Card
           title='Produse in serie'
@@ -30,12 +38,8 @@ export const Service = () => {
           actions={
             <>
               <div className='cardDoubleButtons'>
-                <Button color='secondary'>Portfoliu</Button>
-                <Button
-                  color='secondary'
-                  style={{ color: 'black', background: '#ff8900' }}
-                >
-                  Parteneri
+                <Button color='secondary' className='hoveredButton'>
+                  Portfoliu
                 </Button>
 
                 {/* <Button text='Galerie' className='btn-primary-sm' />{' '}
