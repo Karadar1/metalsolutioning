@@ -1,0 +1,293 @@
+/* TODO  */
+
+/* IMPORTANT NOTE reactstrap is using PascalCase therefore i'm using camel case to avoid bugs */
+/* The styling process is the folowing: Styling for individual components for desktop / Scaling for mobile */
+
+/* Body styling (general styling) */
+body {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.titles {
+    text-align: center;
+    border-bottom: 2px dashed #ff8900;
+    margin-bottom: 80px;
+}
+
+/* COMPONENT STYLING */
+
+/* PAGES */
+.pages {
+    padding-top: 100px;
+    height: calc(110vh - 70px);
+    width: 100%;
+}
+
+/* CARD */
+.cardComponent {
+    z-index: 1;
+    display: inline-block;
+    margin: 40px 40px;
+    height: 390px;
+    width: 280px;
+    background-color: #333333;
+    border-radius: 15px;
+    border: 2px solid;
+}
+
+.cardComponent:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 2px solid #ff8900;
+}
+.cardComponent:hover .cardHeader {
+    border-bottom: 2px solid #ff8900;
+}
+
+.cardComponent:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+}
+
+.cardComponent:hover:before {
+    transform: scale(2.15);
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 125px;
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 2px solid;
+    border-radius: 12px 12px 0px 0px;
+}
+.cardHeader img {
+    justify-self: start;
+    height: 45px;
+    width: 45px;
+}
+
+.cardComponent:nth-of-type(2) .cardHeader img {
+    height: 40px;
+    width: 40px;
+}
+
+.cardBody {
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 15px 15px;
+    height: 265px;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cardText {
+    width: 80%;
+}
+
+.cardBody ~ div {
+    margin: 0px 15px;
+}
+
+/* NAVBAR  */
+.navBar {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    background: #f5f5f5;
+}
+.logo {
+    margin-left: 40px;
+}
+
+#logoImg {
+    width: 250px;
+    height: 100px;
+}
+
+.nav_links {
+    width: 40%;
+    padding: 0;
+    margin-right: 5%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline;
+    margin: 0px 10px;
+    font-size: 24px;
+    /* margin: 15px 15px 0 15px; */
+    transition: 0.2s;
+    transition-property: color, transform;
+    color: #333333;
+    transition: 0.1s;
+}
+.nav_links li[selected="true"] {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.listItemActive {
+    color: #f5f5f5;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.listItem:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    cursor: pointer;
+    color: lightslategray;
+}
+
+/* FOOTER */
+.footer {
+    color: #f5f5f5;
+    background-color: #333333;
+    display: block;
+    margin-top: 10px;
+}
+.footerMainBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footerMainBody ul {
+    margin: 10px 20px;
+    height: 120px;
+    padding: 0px;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+}
+.footerMainBody {
+    margin-top: 10px;
+}
+.footerMainBody ul li {
+    margin: 10px 0px;
+}
+
+.footerMainBody ul h5 {
+    font-weight: 600;
+}
+
+.footerMainBody ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+.footerHeader {
+    height: 55px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.footerHeader h1 {
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+/* Scaling for Moible and low res */
+@media (max-width: 768px) {
+    /* NAVBAR */
+    .navBar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #logoImg {
+        height: 50px;
+    }
+    .nav_links {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* FOOTER */
+
+    /* Styling for every page */
+    .pages {
+        padding-top: 100px;
+        height: calc(150vh - 70px);
+        margin: auto;
+    }
+}
+
+/* Styling for very page */
+
+/* CONTACT */
+.mapAndContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.mapAndContact iframe {
+    width: 90%;
+    height: 300px;
+}
+
+#infoLists {
+    width: 80%;
+    margin: 40px 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#infoLists ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+}
+#infoLists ul li {
+    display: flex;
+    align-items: center;
+}
+
+.listIcons {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-top: 8px;
+    line-height: 200%;
+}
+
+.headTitles {
+    margin: 20px;
+}
+ul li {
+    margin-bottom: 15px;
+}
+
+/* SERVICII */
+.cardsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.butt {
+    color: #ff8900;
+}

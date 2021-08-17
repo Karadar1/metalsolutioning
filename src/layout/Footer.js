@@ -1,33 +1,42 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
     <div>
-      <div className='footer'>
-        <div className='footerHeader'>
+      <div className="footer">
+        <div className="footerHeader">
           <h1>MetalSolutioning</h1>
-          <img src='' alt='' />
-          <img src='' alt='' />
-          <img src='' alt='' />
         </div>
 
-        <div className='footerMainBody'>
+        <div className="footerMainBody">
           <ul>
-            {' '}
+            {" "}
             <h5>Despre noi</h5>
-            <li>Echipa Noastra</li>
+            <li>
+              <a href="#acasa">Echipa noastra</a>
+            </li>
           </ul>
           <ul>
             <h5>Informatii</h5>
-            <li>Contact</li>
-            <li>Locatie</li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#contact">Locatie</a>
+            </li>
           </ul>
           <ul>
-            {' '}
+            {" "}
             <h5>Servicii</h5>
-            <li>Restautarari</li>
-            <li>Confectii metalice</li>
-            <li>Produse in serie</li>
+            <li>
+              <a href="#servicii">Restautarari</a>
+            </li>
+            <li>
+              <a href="#servicii">Confectii metalice</a>
+            </li>
+            <li>
+              <a href="#servicii">Produse in serie</a>
+            </li>
           </ul>
           <ul>
             <h5>Orar</h5>

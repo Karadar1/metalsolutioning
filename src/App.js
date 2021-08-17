@@ -1,21 +1,14 @@
-import { createContext, useState } from 'react';
-import './style.css';
-import { NavbarEx } from './layout/NavbarEx';
-import Body from './layout/Body';
-import { ScrollingProvider } from 'react-scroll-section';
-
-export const wedlingMaskState = createContext();
+import "./index.css";
+import { NavbarEx } from "./layout/NavbarEx";
+import Body from "./layout/Body";
+import { ScrollingProvider } from "react-scroll-section";
 
 function App() {
-  const [imgState, setImgState] = useState('firstPosition');
-
   return (
-    <div className='App'>
+    <div className="App">
       <ScrollingProvider>
-        <wedlingMaskState.Provider value={{ imgState, setImgState }}>
-          <NavbarEx />
-          <Body />
-        </wedlingMaskState.Provider>
+        <NavbarEx />
+        <Body />
       </ScrollingProvider>
     </div>
   );
