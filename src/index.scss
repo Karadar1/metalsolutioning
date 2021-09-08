@@ -240,6 +240,9 @@ nav img {
   flex-direction: column;
   height: 100vh;
 }
+#weldingMask {
+  display: none;
+}
 
 .homeTitle {
   margin-top: 10%;
@@ -458,10 +461,14 @@ ul li {
   .homeParagraph {
     width: 100%;
   }
+  #weldingMask {
+    display: block;
+  }
   .homeTitle {
     margin-top: 10px;
   }
-  .weldingMask {
+  #weldingMask {
+    max-width: 40vh;
     margin-top: 5vh;
   }
 
@@ -496,7 +503,10 @@ ul li {
 
   /* STYLING FOR INDIVIDUAL PAGES */
   /* Portofoliu */
-
+  // Contact
+  #contact {
+    height: 110vh;
+  }
   /* Acasa */
   .homeContainer {
     display: flex;
@@ -556,9 +566,6 @@ ul li {
     align-items: center;
     margin-top: 50px;
   }
-  /* .pages {
-    height: 100vh;
-  } */
 
   @keyframes weldingMaskAnimation {
     from {
@@ -570,14 +577,12 @@ ul li {
   }
 }
 
-@media (min-width: 1300px) {
-  .pages {
-    height: 100vh;
-  }
-}
 /* STLYLING FOR Laptop */
 
 @media (min-width: 1440px) {
+  .pages {
+    height: 110vh;
+  }
   /* STYLING FOR INDIVIDUAL COMPONENTS */
   /* Cards */
   .cardComponent {

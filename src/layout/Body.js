@@ -1,18 +1,21 @@
-import React from 'react';
-import { Section } from 'react-scroll-section';
-import { Service } from './Service';
-import { Acasa } from './Acasa';
-import { Contact } from './Contact';
-import { Portofoliu } from './Portofoliu';
-import Footer from './Footer';
+import React, { useState } from "react";
+import { Servicii } from "./Servicii";
+import { Acasa } from "./Acasa";
+import { Contact } from "./Contact";
+import { Portofoliu } from "./Portofoliu";
+import Footer from "./Footer";
+export const SlideContext = React.createContext();
 
 export const Body = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
   return (
     <div>
-      <div className='Sections'>
+      <div className="Sections">
         <Acasa />
-        <Service />
-        <Portofoliu />
+        <SlideContext.Provider value={{ slideIndex, setSlideIndex }}>
+          <Servicii />
+          <Portofoliu />
+        </SlideContext.Provider>
         <Contact />
       </div>
       <Footer />

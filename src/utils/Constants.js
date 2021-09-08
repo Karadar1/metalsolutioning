@@ -62,19 +62,6 @@ export const SliderData = [
     title: "Confectii Metalice",
     img: confectii11
   },
-
-  {
-    title: "Renovari",
-    img: renovari1
-  },
-  {
-    title: "Renovari",
-    img: renovari2
-  },
-  {
-    title: "Renovari",
-    img: renovari3
-  },
   {
     title: "Produse în Serie",
     img: serie1
@@ -86,5 +73,17 @@ export const SliderData = [
   {
     title: "Produse în Serie",
     img: serie3
+  },
+  {
+    title: "Renovari",
+    img: renovari1
+  },
+  {
+    title: "Renovari",
+    img: renovari2
+  },
+  {
+    title: "Renovari",
+    img: renovari3
   }
 ];

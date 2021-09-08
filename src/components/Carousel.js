@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import BtnSlider from "./BtnSlider";
 import { SliderData } from "../utils/Constants";
-
+import { SlideContext } from "../layout/Body";
 export function Slider() {
-  const [slideIndex, setSlideIndex] = useState(0);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
 
   const nextSlide = () => {
     if (slideIndex === SliderData.length - 1) return setSlideIndex(0);
